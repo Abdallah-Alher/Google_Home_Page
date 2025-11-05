@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; 
+}
+
+body {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  background-color: #fff;
+  color: #202124;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+/* HEADER */
+.header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  width: 70%;                
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #202124;
+  font-size: 16px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.navbar span a:hover {
+  background-color: #f1f3f4;
+}
+
+/* SECTION PRINCIPALE */
+.search-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 120px;
+  font-weight: 800;
+  width: 100%;
+}
+
+.blue   { color: #4285F4; }
+.red    { color: #EA4335; }
+.yellow { color: #FBBC05; }
+.green  { color: #34A853; }
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+input {
+  width: 35rem;
+  max-width: 90%; 
+  padding: 10px 20px;
+  border: 1px solid #dfe1e5;
+  border-radius: 25px;
+  font-size: 25px;
+  outline: none;
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: #4285F4;
+  box-shadow: 0 0 5px #4285F4;
+}
+
+input:hover {
+  border-color: #4285F4 ;
+  box-shadow: 0 0 5px #4285F4;
+  cursor: text;
+}
+
+/* BOUTONS */
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+button {
+  background-color: #f8f9fa;   
+  font-weight: bold;
+  color: #202124;                 
+  border: 1px solid #f8f9fa;
+  border-radius: 50px;
+  padding: 8px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: white;
+  color: #34A853;             
+  border: 1px solid #dadce0;
+}
+
+/* FOOTER */
+.footer-links {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.footer-links ul {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* LOCALISATION */
+.location li {
+  list-style: none;
+  color: #70757a;
+}
+
+.location li:nth-child(2)::before,
+.location li:nth-child(3)::before {
+  content: "- ";
+  color: #70757a;
+}
+
+/* AUTRES LIENS */
+.autres {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; 
+  padding: 0;
+  margin: 0;
+  list-style: none; 
+}
+
+.autres li {
+  position: relative;
+  padding-left: 10px; 
+}
+
+.autres li:not(:first-child)::before {
+  content: "•";          
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: black;        
+  font-size: 16px; 
+}
+
+.autres li a {
+  text-decoration: none;
+  color: #70757a;
+}
+
+/* --- MEDIA QUERY : écrans ≤ 768px --- */
+@media (max-width: 768px) {
+
+  body {
+    padding: 1rem;
+  }
+
+  /* HEADER & NAVBAR */
+  .header {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .navbar {
+    width: 100%;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .navbar a {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  /* LOGO */
+  .logo {
+    font-size: 70px;
+    gap: 6px;
+    margin: 15px 0;
+  }
+
+  /* BARRE DE RECHERCHE */
+  input {
+    
+    max-width: 85%;
+    font-size: 18px;
+    padding: 8px 15px;
+  }
+
+  /* BOUTONS */
+  .buttons {
+    gap: 8px;
+    width: 65%;
+  }
+
+  button {
+    width: 60%;
+    font-size: 8px;
+    padding: 6px;
+    border-radius: 25px;
+  }
+
+  /* FOOTER */
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .footer-links ul {
+    justify-content: center;
+  }
+
+  .autres {
+    gap: 10px;
+  }
+}
