@@ -192,6 +192,23 @@ button:hover {
   color: #70757a;
 }
 
+
+/* --- MEDIA QUERY : écrans = 1024px --- */
+
+@media (max-width: 1024px) {
+  body {
+    padding: 1rem;
+  }
+.navbar {
+  width: 100%;                
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;
+  gap: 20px;
+}
+
+}
+
 /* --- MEDIA QUERY : écrans ≤ 768px --- */
 @media (max-width: 768px) {
 
