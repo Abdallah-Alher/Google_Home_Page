@@ -37,8 +37,8 @@ ALHER MATAOU Abdallah
 
 ## Liens :
 
-- Repo :
-- Page : 
+- Repo : https://github.com/Abdallah-Alher/Google_Home_Page.git
+- Page : https://abdallah-alher.github.io/Google_Home_Page/
 
 
 ## Captures :
